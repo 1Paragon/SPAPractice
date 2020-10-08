@@ -76,3 +76,9 @@ document.querySelector("form").addEventListener("submit", event => {
     console.log("Value: ", el.value);
   });
 });
+import axios from "axios";
+axios.get("https://jsonplaceholder.typicode.com/posts").then(response => {
+  response.data.forEach(post => {
+    state.Blog.posts.push(post);
+  });
+});
