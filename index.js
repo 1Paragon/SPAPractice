@@ -82,3 +82,11 @@ axios.get("https://jsonplaceholder.typicode.com/posts").then(response => {
     state.Blog.posts.push(post);
   });
 });
+//API from weather section partial
+axios
+.get(/* yur API endpoint from above */)
+.then(response => {
+    state.Home.weather.city = response.name;
+    .temp = response.main.temp;
+    .description = response.weather.description;
+})
